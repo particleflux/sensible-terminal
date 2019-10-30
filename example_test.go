@@ -1,15 +1,15 @@
-package sensible_terminal_test
+package sensibleterminal_test
 
 import "fmt"
 import "github.com/particleflux/sensible-terminal"
 
 func ExampleFirst() {
-	term, _ := sensible_terminal.First()
+	term, _ := sensibleterminal.First()
 	fmt.Println(term)
 }
 
 func ExampleAll() {
-	terms, _ := sensible_terminal.All()
+	terms, _ := sensibleterminal.All()
 	for _, term := range terms {
 		fmt.Println(term)
 	}

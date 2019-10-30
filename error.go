@@ -1,4 +1,4 @@
-package sensible_terminal
+package sensibleterminal
 
 // NotFoundError is returned when no known terminal emulator can be found
 type NotFoundError struct {

@@ -1,5 +1,5 @@
 // Package sensible_terminal auto-detects installed terminal emulators
-package sensible_terminal
+package sensibleterminal
 
 import (
 	"os"

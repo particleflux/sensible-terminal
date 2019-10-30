@@ -1,6 +1,9 @@
 # sensible-terminal
 
 [![Documentation](https://godoc.org/github.com/particleflux/sensible-terminal?status.svg)](http://godoc.org/github.com/particleflux/sensible-terminal)
+[![Go Report Card](https://goreportcard.com/badge/github.com/particleflux/sensible-terminal)](https://goreportcard.com/report/github.com/particleflux/sensible-terminal)
+[![Maintainability](https://api.codeclimate.com/v1/badges/22331240b13e0202e223/maintainability)](https://codeclimate.com/github/particleflux/sensible-terminal/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/22331240b13e0202e223/test_coverage)](https://codeclimate.com/github/particleflux/sensible-terminal/test_coverage)
 
 Auto-detect installed terminal emulators
 
@@ -18,14 +21,14 @@ import "fmt"
 import "github.com/particleflux/sensible-terminal"
 
 func main() {
-    term, err := sensible_terminal.First()
+    term, err := sensibleterminal.First()
     if err != nil {
         panic(err.Error())
     }
     fmt.Println("first terminal:", term)
 
 
-    terms, _ := sensible_terminal.All()
+    terms, _ := sensibleterminal.All()
     if err != nil {
         panic(err.Error())
     }

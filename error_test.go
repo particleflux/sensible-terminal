@@ -1,4 +1,4 @@
-package sensible_terminal
+package sensibleterminal
 
 import "testing"
 

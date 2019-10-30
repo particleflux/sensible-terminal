@@ -1,8 +1,8 @@
-// Package sensible_terminal auto-detects installed terminal emulators
+// Package sensibleterminal auto-detects installed terminal emulators
 //
 // This will search through a builtin list of known terminal emulators, like
 // `xterm` or `gnome-terminal`. Those binaries which exist in PATH are returned.
-package sensible_terminal
+package sensibleterminal
 
 import (
 	"os/exec"
@@ -38,7 +38,7 @@ var candidates = [...]string{
 	"hyper",
 }
 
-// Detect and return all found terminal emulators
+// All detects and returns all found terminal emulators
 func All() ([]string, error) {
 	emulators := make([]string, 0)
 
@@ -55,7 +55,7 @@ func All() ([]string, error) {
 	return emulators, nil
 }
 
-// Detect and return the first found terminal emulator
+// First detects and returns the first found terminal emulator
 func First() (string, error) {
 	for _, emulator := range candidates {
 		if commandExists(emulator) {
