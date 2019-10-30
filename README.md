@@ -13,6 +13,8 @@ Auto-detect installed terminal emulators
 This will search through a builtin list of known terminal emulators, like
 `xterm` or `gnome-terminal`. Those binaries which exist in PATH are returned.
 
+Inspired by [i3-sensible-terminal](https://github.com/i3/i3/blob/next/i3-sensible-terminal)
+
 ## Example
 
 ```go
