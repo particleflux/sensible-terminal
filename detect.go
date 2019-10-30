@@ -1,4 +1,7 @@
 // Package sensible_terminal auto-detects installed terminal emulators
+//
+// This will search through a builtin list of known terminal emulators, like
+// `xterm` or `gnome-terminal`. Those binaries which exist in PATH are returned.
 package sensible_terminal
 
 import (
