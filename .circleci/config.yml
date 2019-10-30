@@ -1,0 +1,37 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/golang:1.13-buster
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: |
+            curl -L 'https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64' > /tmp/cc-test-reporter
+            chmod +x /tmp/cc-test-reporter
+      - run:
+          name: Run tests
+          command: |
+            /tmp/cc-test-reporter before-build
+
+            PREFIX="$(go list -m)"
+            go test -coverprofile=c.out
+
+            /tmp/cc-test-reporter format-coverage -t gocov --prefix "$PREFIX"
+            /tmp/cc-test-reporter upload-coverage || /bin/true
+workflows:
+  version: 2
+  commit:
+    jobs:
+      - build
+  nightly:
+    triggers:
+      - schedule:
+          cron: 0 0 * * *
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - build
