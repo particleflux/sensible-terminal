@@ -40,7 +40,7 @@ var candidates = [...]string{
 
 // All detects and returns all found terminal emulators
 func All() ([]string, error) {
-	emulators := make([]string, 0)
+	var emulators []string
 
 	for _, emulator := range candidates {
 		if commandExists(emulator) {
