@@ -3,6 +3,8 @@
 [![Documentation](https://godoc.org/github.com/particleflux/sensible-terminal?status.svg)](http://godoc.org/github.com/particleflux/sensible-terminal)
 [![CircleCI](https://circleci.com/gh/particleflux/sensible-terminal.svg?style=shield)](https://circleci.com/gh/particleflux/sensible-terminal)
 [![Go Report Card](https://goreportcard.com/badge/github.com/particleflux/sensible-terminal)](https://goreportcard.com/report/github.com/particleflux/sensible-terminal)
+[![Maintainability](https://qlty.sh/gh/particleflux/projects/sensible-terminal/maintainability.svg)](https://qlty.sh/gh/particleflux/projects/sensible-terminal)
+[![Code Coverage](https://qlty.sh/gh/particleflux/projects/sensible-terminal/coverage.svg)](https://qlty.sh/gh/particleflux/projects/sensible-terminal)
 
 Auto-detect installed terminal emulators
 
